@@ -1,0 +1,90 @@
+body {
+  color: #212121;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+.section {
+  margin-bottom: 150px;
+}
+
+.header {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.logo, .menu {
+  display: inline-block;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 0 25px;
+}
+
+.menu li a {
+  color: #212121;
+}
+
+.menu li a.active {
+  color: #2D76F9;
+  font-weight: 700;
+}
+
+.logo-important {
+  color: #2D76F9;
+}
+
+.btn {
+  border-radius: 50px;
+  background: none;
+  border: 1px solid #2D76F9;
+  padding: 10px 40px;
+  font-size: 18px;
+  color: #2D76F9;
+  font-weight: 400;
+}
+
+.main-section {
+  position: relative;
+  min-height: 850px;
+}
+
+.main-section .background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+
+  background: url('../images/hero-image.png') 100% 50% no-repeat;
+  background-size: contain;
+}
+
+.main-section-content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.h1 {
+  font-size: 64px;
+  line-height: 85px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.p {
+  line-height: 36px;
+  color: #747474;
+  margin-bottom: 50px;
+}
+
+.btn-secondary {
+  background: #2D76F9;
+  color: white;
+  padding: 22px 60px;
+}
