@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
   <link type="text/css" rel="stylesheet" href="css/styles.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,5 +111,74 @@
     </div>
   </section>
 
+  <section class="section section-download">
+    <div class="container">
+      <div class="background"></div>
+
+      <div class="section-content">
+        <h2 class="h2 h2-secondary">Download an app now and the various benefits you will get immediately</h2>
+
+        <div class="actions-container">
+          <button class="btn btn-third">Download App</button>
+          <button class="btn btn-fourth">About App</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section section-testimonials">
+    <div class="background">
+      <div class="bg-testimonials"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6"></div>
+        <div class="col-1"></div>
+        <div class="col-5 col-testimonials">
+          <h2 class="h2">What do they think</h2>
+
+          <ul class="testimonials">
+            <li>
+              <div class="user">
+                <div class="avatar" style="background-image: url('images/avatar.png')"></div>
+                <div class="user-info">
+                  <p class="username">Samantha Sench</p>
+                  <p class="status">Student at University</p>
+                </div>
+              </div>
+
+              <div class="p text">
+                “ Hi, it’s Samantha. After using it made me a lot of benefits, starting with convenience of setting a deadline of tasks and schedule after that the app is very simple using. “
+              </div>
+            </li>
+            <li>
+              <div class="user">
+                <div class="avatar" style="background-image: url('images/avatar.png')"></div>
+                <div class="user-info">
+                  <p class="username">New User</p>
+                  <p class="status">Student at College</p>
+                </div>
+              </div>
+
+              <div class="p text">
+                “ Hi, it’s User. After using it made me a lot of benefits, starting with convenience of setting a deadline of tasks and schedule after that the app is very simple using. “
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    $(document).ready(function(){
+      $('.testimonials').bxSlider({
+        pager: false,
+        mode: 'fade'
+      });
+    });
+  </script>
 </body>
 </html>
