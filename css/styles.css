@@ -14,6 +14,60 @@ body {
   margin-bottom: 50px;
   position: relative;
   z-index: 1;
+  align-items: center;
+}
+
+.menu-burger {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #2D76F9;
+  border-radius: 5px;
+  position: relative;
+}
+
+.menu-burger:after {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  content: '';
+
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+
+  background: url('../images/hamburger-menu.svg') 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.menu-opened {
+  overflow: hidden;
+}
+
+.menu-mobile {
+  position: fixed;
+  width: 100%;
+  top: 100px;
+  bottom: 0;
+  left: 100%;
+  background: white;
+  transition: left 0.3s ease-in-out;
+}
+
+.menu.menu-mobile ul {
+  text-align: left;
+  padding-top: 30px;
+}
+.menu.menu-mobile li {
+  display: block;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.menu-opened .menu-mobile {
+  left: 0;
 }
 
 .logo, .menu {
@@ -70,6 +124,7 @@ body {
 
 .main-section {
   min-height: 850px;
+  overflow: hidden;
 }
 
 .main-section .background {
@@ -309,6 +364,7 @@ body {
 
 .testimonials .text {
   color: #212121;
+  margin-bottom: 0;
 }
 
 .section-footer {
@@ -414,13 +470,18 @@ body {
   background: url('../images/la_arrow-right.svg') no-repeat 50% 50%;
 }
 
+.bx-viewport {
+  padding-bottom: 50px;
+}
+
 @media (max-width: 1199px) {
   body {
     font-size: 16px;
   }
 
-  .header .menu {
-    display: none;
+  .menu li {
+    display: inline-block;
+    padding: 0 15px;
   }
 
   .main-section .background-phone {
@@ -479,6 +540,12 @@ body {
 
   .section-download .actions-container {
     padding-top: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header .menu-desktop {
+    display: none;
   }
 }
 

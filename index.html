@@ -22,12 +22,12 @@
   <section class="section main-section">
     <div class="container">
       <header class="header row">
-        <div class="col-12 col-md-7">
+        <div class="col-6 col-md-7">
           <div class="logo">
             <img src="images/logo.svg">
             <span class="logo-text">Remind<span class="logo-important">me</span></span>
           </div>
-          <nav class="menu">
+          <nav class="menu menu-desktop">
             <ul>
               <li><a href="#" class="active">Home</a></li>
               <li><a href="#">Features</a></li>
@@ -35,8 +35,20 @@
             </ul>
           </nav>
         </div>
-        <div class="d-none d-md-block col-md-5 text-right">
+        <div class="d-none d-lg-block col-md-5 text-right">
           <button class="btn btn-primary">About App</button>
+        </div>
+
+        <div class="col-6 d-block d-lg-none col-md-5 text-right">
+          <i class="menu-burger"></i>
+
+          <nav class="menu menu-mobile">
+            <ul>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">About us</a></li>
+            </ul>
+          </nav>
         </div>
       </header>
     </div>
@@ -150,7 +162,7 @@
               </div>
 
               <div class="p text">
-                “ Hi, it’s Samantha. After using it made me a lot of benefits, starting with convenience of setting a deadline of tasks and schedule after that the app is very simple using. “
+                “ Hi, it’s Samantha. After using it made me a lot of benefits, starting wi, it’s Samantha. After using it made me a lot of benefits, starting wi, it’s Samantha. After using it made me a lot of benefits, starting wi, it’s Samantha. After using it made me a lot of benefits, starting wi, it’s Samantha. After using it made me a lot of benefits, starting with convenience of setting a deadline of tasks and schedule after that the app is very simple using. “
               </div>
             </li>
             <li>
@@ -229,9 +241,22 @@
 
   <script>
     $(document).ready(function(){
-      $('.testimonials').bxSlider({
+      const bxslider = $('.testimonials').bxSlider({
         pager: false,
-        mode: 'fade'
+        mode: 'fade',
+        adaptiveHeight: true,
+      });
+
+      setTimeout(() => {
+        bxslider.goToNextSlide();
+      }, 100);
+
+      $('.menu-burger').click(() => {
+        if ($('body').hasClass('menu-opened')) {
+          $('body').removeClass('menu-opened');
+        } else {
+          $('body').addClass('menu-opened');
+        }
       });
     });
   </script>
